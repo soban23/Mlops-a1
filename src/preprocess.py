@@ -11,16 +11,9 @@ with open("params.yaml") as f:
 train_data = np.load("data/raw/train.npz")
 test_data = np.load("data/raw/test.npz")
 
-<<<<<<< HEAD
 x_train_full = train_data["x"].astype("float32") / 255.0 - 0.5
 y_train_full = train_data["y"]
 x_test = test_data["x"].astype("float32") / 255.0 - 0.5
-=======
-x_train_full = (train_data["x"].astype("float32") / 127.5) - 1.0
-y_train_full = train_data["y"]
-
-x_test = (test_data["x"].astype("float32") / 127.5) - 1.0
->>>>>>> ff90e05 (teammate-sim: alternate normalization)
 y_test = test_data["y"]
 
 x_train, x_val, y_train, y_val = train_test_split(
